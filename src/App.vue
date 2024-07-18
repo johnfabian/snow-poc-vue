@@ -14,13 +14,11 @@
   </div>
 </template>
 
-
-
 <script setup lang="ts">
 import { ref } from 'vue'
 import Menubar from 'primevue/menubar'
 import Menu from 'primevue/menu'
-import router from './router';
+import router from './router'
 
 const topMenuItems = ref([
   {
@@ -59,15 +57,37 @@ const sideMenuItems = ref([
 ])
 </script>
 
-<style scoped>
+<style>
 body {
-  padding: 0; 
-  margin: 0; 
+  margin: 0;
+  padding: 0;
 }
+
 .layout-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.steelers-header {
+  background-color: #000000;
+}
+
+.steelers-header .p-menubar {
+  background-color: #000000;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+}
+
+.steelers-header .p-menubar .p-menuitem-link,
+.steelers-header .p-menubar .p-menuitem-link .p-menuitem-text,
+.steelers-header .p-menubar .p-menuitem-link .p-menuitem-icon {
+  color: #f7df07 !important;
+}
+
+.steelers-header .p-menubar .p-menuitem-link:not(.p-disabled):hover {
+  background-color: rgba(255, 182, 18, 0.1);
 }
 
 .layout-content {
@@ -80,35 +100,22 @@ aside {
   background-color: #f8f9fa;
 }
 
+.steelers-sidebar.p-menu {
+  width: 100%;
+  border: none;
+  background-color: #f8f9fa;
+}
+
+.steelers-sidebar.p-menu .p-menuitem-link {
+  padding: 0.75rem 1rem;
+}
+
+.steelers-sidebar.p-menu .p-menuitem-link:not(.p-disabled):hover {
+  background-color: #e9ecef;
+}
+
 main {
   flex-grow: 1;
-  padding: 20px;
-}
-
-/* Steelers-themed styles */
-.steelers-header {
-  color: #FFB612;
-  background-color: #000000; /* Black background */
-}
-
-.steelers-header .p-menubar {
-  background-color: #000000; /* Ensure menubar background is also black */
-  border: none;
-  border-radius: 0;
-}
-
-.steelers-header .p-menubar .p-menuitem-link .p-menuitem-text,
-.steelers-header .p-menubar .p-menuitem-link .p-menuitem-icon {
-  color: #FFB612; /* Yellow text and icons */
-}
-
-.steelers-header .p-menubar .p-menuitem-link:not(.p-disabled):hover {
-  background-color: #333333; /* Darker background on hover */
-}
-
-.steelers-header .p-menubar .p-menuitem-link:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 182, 18, 0.4); /* Yellow focus ring */
+  padding: 1rem;
 }
 </style>
-
-<
