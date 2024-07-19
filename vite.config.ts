@@ -8,11 +8,11 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        entryFileNames: 'index.js',
-        chunkFileNames: 'index.js',
+        entryFileNames: 'index.[hash].js',
+        chunkFileNames: 'index.[hash].js',
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'index.css') return 'index.css'
-          return 'assets/[name].[ext]'
+          if (assetInfo.name === 'index.css') return 'index.[hash].css'
+          return 'assets/[name].[hash].[ext]'
         }
       }
     },
