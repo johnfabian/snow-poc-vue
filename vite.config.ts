@@ -34,5 +34,8 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+  },
+  define: {
+    'process.env': {} //Need this line otherwise SNOW will throw error, process not defined
   }
 })
