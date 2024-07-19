@@ -1,16 +1,16 @@
 <template>
   <div class="layout-wrapper">
     <header class="steelers-header">
-      <Menubar :model="topMenuItems" class="p-menubar-dark" />
+      <Menubar :model="topMenuItems" class="p-menubar-dark shadow-4" />
     </header>
     <div class="layout-content">
       <aside>
-        <Menu :model="sideMenuItems" />
+        <Menu :model="sideMenuItems" class="shadow-2" />
       </aside>
       <main>
         <router-view></router-view>
       </main>
-    </div>
+    </div>raised
   </div>
 </template>
 
@@ -111,7 +111,7 @@ aside {
 }
 
 .steelers-sidebar.p-menu .p-menuitem-link:not(.p-disabled):hover {
-  background-color: #e9ecef;
+  background-color: #e9ecef;  
 }
 
 main {
