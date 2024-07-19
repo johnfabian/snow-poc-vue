@@ -12,6 +12,8 @@
       </main>
     </div>raised
   </div>
+
+   <Toast position="bottom-right" />
 </template>
 
 <script setup lang="ts">
@@ -80,6 +82,28 @@ body {
   padding: 0.5rem 1rem;
 }
 
+.steelers-header .p-menubar .p-menuitem-link:not(.p-disabled):hover {
+  color: #000000 !important; /* Change text color to black on hover */
+}
+
+.steelers-header .p-menubar .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text,
+.steelers-header .p-menubar .p-menuitem-link:not(.p-disabled):hover .p-menuitem-icon {
+  color: #000000 !important; /* Change text color to black on hover */
+}
+
+.steelers-sidebar.p-menu .p-menuitem-link:not(.p-disabled):hover {
+  color: #000000 !important; /* Change text color to black on hover */
+}
+
+.steelers-sidebar.p-menu .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text,
+.steelers-sidebar.p-menu .p-menuitem-link:not(.p-disabled):hover .p-menuitem-icon {
+  color: #000000 !important; /* Change text color to black on hover */
+}
+
+
+
+
+
 .steelers-header .p-menubar .p-menuitem-link,
 .steelers-header .p-menubar .p-menuitem-link .p-menuitem-text,
 .steelers-header .p-menubar .p-menuitem-link .p-menuitem-icon {
@@ -119,3 +143,4 @@ main {
   padding: 1rem;
 }
 </style>
+c
