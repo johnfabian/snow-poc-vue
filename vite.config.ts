@@ -16,7 +16,7 @@ export default defineConfig({
         }
       }
     },
-    cssCodeSplit: false,
+    cssCodeSplit: false, //this prevents multiple files so we only have to deploy 1 JS and 1 CSS file
     minify: 'esbuild',
     target: 'es2015',
     outDir: 'dist',
@@ -27,7 +27,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/main.ts'),
       name: 'SnowApp',
       fileName: 'index',
-      formats: ['iife']
+      formats: ['iife'] //this creates a IIFE so app runs once loaded since we are inside of SNOW
     }
   },
   resolve: {
